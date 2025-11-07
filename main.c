@@ -1,72 +1,30 @@
 #include <stdio.h>
-#define MAXLINE 1000 /* maximum input line size */
+#include <string.h>
+#include <stdlib.h>
 
-int getline(char line[], int maxline);
-void copy(char to[], char from[]);
+char* buf;
 
-/* print longest input line */
-main()
+int sum_to_n(int num)
 {
-	int len; // current line length
-	int max; /* maximum length seen so far */
-	char line [MAXLINE]; /*current input line*/
-	char longest [MAXLINE]; /* longest line saved here */
+	int i, sum=0;
+	for(i = 1; i < num; ++i)
+		sum += i;
+	return sum;
+}
 
-	void removeTrailingWhitespace(char line[], int len);
+void printSum()
+{
+	char line[10];
+	printf("Enter a number:\n");
+	fgets(line, 10, stdin);
+	if(line != NULL)
+		strtok(line, "\n");
+	sprintf(buf, "sum=%d", sum_to_n(atoi(line)));
+	printf("%s\n", buf);
+}
 
-	max = 0;
-	// while there's another line 
-	while ((len = getline(line, MAXLINE)) > 0)
-		if (len > max)
-		{
-			max = len;
-			copy(longest, line);
-		}
-	
-	if (max > 0) /* there was a line */
-		printf("%s", longest);
+int main()
+{
+	printSum();
 	return 0;
-}
-
-// this reads a line into s then returns the length
-int getline(char s[], int lim)
-{
-	int c, i;
-
-	// for longest line and not end of file, string s is set to char
-	// sets the second line
-	for (i=0; i < lim -1 && (c=getchar())!=EOF && c!='\n'; ++i)
-		s[i] = c;
-	// determines if end of line adds the character
-	if (c=='\n') {
-		s[i] = c;
-		++i;
-	}
-
-	s[i] = '\0';
-
-	return i;
-}
-
-/* copy: copy from 'from' into 'to'; assume to is big enough*/
-void copy (char to[], char from[])
-{
-	int i;
-
-	i = 0;
-	while ((to[i] = from[i]) != '\0')
-			++i;
-}
-
-void removeTrailingWhitespace(char line[], int length)
-{
-	int i;
-
-	for (i = length -2; i >= 0; --i)
-	{
-		if (line[i] == ' ' || line[i] == '\t')
-			line[i] = '\0';
-		else 
-			break;
-	}
 }

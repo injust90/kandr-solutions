@@ -1,0 +1,5 @@
+Variables in such as line longest, and private to local or main.
+
+The variable in a function instantiates when the function is called, and is deleted when the function is exited.
+
+Because automatic variables come and go with function invocation. If not set, they will contain garbage.
