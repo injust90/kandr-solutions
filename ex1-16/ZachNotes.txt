@@ -9,3 +9,9 @@ to by str.
 	while length is greater than zero and line and not equal to newline and check to see if end of the given stream has reached.
 	char cont[MAXLINE]
 
+// while you are getting in the sentence, you are setting length to the strlen of the sentence
+	// while length is greater than zero and character is not equal to \n, and not EOF
+		// set array equal to the pre-established limit
+		// if fgets isnot available, break
+		// length += length
+	// compare to establish longest length
