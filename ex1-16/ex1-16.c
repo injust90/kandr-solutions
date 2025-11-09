@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXLINE 3
+#define MAXLINE 5 // maximum input line size
 
 int getline1(char line[], int maxline);
 void copy(char to[], char from[]);
@@ -7,35 +7,58 @@ void copy(char to[], char from[]);
 // print longest input line
 int main()
 {
-	int len;	// current line length
-	int max;	// maximum length seen so far
+	int currentLength;	// current line length
+	int maxlengthseen;	// maximum length seen so far
 	char line [MAXLINE]; 	// curent input line
 	char longest[MAXLINE]; 	// longest line saved here
 
-	max = 0;
-	while ((len = getline1(line, MAXLINE)) > 0)
-		if (len > max) {
-			max = len;
+	maxlengthseen = 0;
+	// while there's another line, if (it's longer than the previous longest) save it
+	// save its length
+	// print longest line
+	while ((currentLength = getline1(line, MAXLINE)) > 0)
+		if (currentLength > maxlengthseen) {
+			maxlengthseen = currentLength;
 			copy(longest, line);
 		}
-	if (max > 0)	// there was a line
+	if (maxlengthseen > 0)	// there was a line
 		printf("%s", longest);
 	return 0;
 }
 
 // getline: read a line int s, return length
-int getline1(char s[], int lim)
+int getline1(char s[], int limitMAXLINE)
 {
-	int c, i;
+	int c, length, currentCount, maxCount;
 
-	for (i = 0; i < lim - 1 && (c = getchar())!=EOF && c!='\n'; ++i)
-		s[i] = c;
-	if (c == '\n') {
-		s[i] = c;
-		++i;
+	// while((c = getchar())!= EOF)
+	// {
+	// 	printf("%c", c);
+	// 	++currentCount;
+	// 	if (currentCount > maxCount)
+	// 	{
+	// 		maxCount = currentCount;
+	// 	}
+	// 	if (c == '\n')
+	// 	{
+	// 		currentCount=0;
+	// 	}
+	// }
+
+	// for (length = 0; length < limitMAXLINE - 1 && (c = getchar())!=EOF && c!='\n'; ++length)
+	for (length = 0; (c = getchar())!=EOF && c!='\n'; ++length)
+	{
+		s[length] = c;
 	}
-	s[i] = '\0';
-	return i;
+
+	if (c == '\n') {
+		s[length] = c;
+		++length;
+	}
+
+	s[length] = '\0';
+	printf("Length: %d", length);
+	return length;
 }
 
 // copy copy 'from' into 'to'; assume to is big enough
