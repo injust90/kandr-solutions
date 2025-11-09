@@ -9,3 +9,33 @@ How to handle buffers in nvim?
 if characters are past length, then we continue to count. but don't print
 
 loop through the sentence, until you get EOF 
+
+
+Pseudo-code
+12345
+12345
+
+Store 12345
+
+If we see 123456
+We went past the limit set
+
+Therefore we need to keep counting despite the limit.
+
+So stop copying and keep counting.
+
+One for loop copies until it reaches the end.
+while gets the character, and
+
+12345
+1234
+12345
+
+since the characters are being eaten by getchar, we need to readd them to an array for use in the next for looop
+
+I THINK... not sure. Debug the for loop first before moving forward.
+
+getline()
+As we get input, store them in an array for use later to be printed as longest
+
+Create a Discord follower notification system.
