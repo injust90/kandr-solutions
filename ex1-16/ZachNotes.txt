@@ -1,0 +1,11 @@
+EOF is a macro, feof is a function.
+
+while fgets is getting the pointer of char array and counting the number of characters, and reading from str
+
+while (get characters from the given file stream and store them in the character array pointed
+to by str.
+	len = strlen(line);
+
+	while length is greater than zero and line and not equal to newline and check to see if end of the given stream has reached.
+	char cont[MAXLINE]
+
