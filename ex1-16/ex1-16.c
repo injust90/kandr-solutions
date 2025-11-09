@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXLINE 10000
+#define MAXLINE 3
 
 int getline1(char line[], int maxline);
 void copy(char to[], char from[]);
@@ -13,7 +13,6 @@ int main()
 	char longest[MAXLINE]; 	// longest line saved here
 
 	max = 0;
-	// while length is being set to getline, if length is greater than max, max is set to length, and we copy the longest to the line
 	while ((len = getline1(line, MAXLINE)) > 0)
 		if (len > max) {
 			max = len;
@@ -46,5 +45,5 @@ void copy(char to[], char from[])
 
 	i = 0;
 	while ((to[i] = from[i]) != '\0')
-			++i;
+		++i;
 }
