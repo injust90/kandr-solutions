@@ -1,0 +1,13 @@
+while (there's another line)
+	if (it's longer than the previous)
+		save it
+		save its length
+	print longest line
+
+
+for the length of the limit and c = getchar is not EOF, copy to string
+
+copy from character to string
+
+right now the issue is that it will not copy strings past length of the MAXLINE,
+because it is not counting the length of the string

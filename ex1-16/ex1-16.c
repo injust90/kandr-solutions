@@ -68,5 +68,5 @@ void copy(char to[], char from[])
 
 	i = 0;
 	while ((to[i] = from[i]) != '\0')
-			++i;
+		++i;
 }
