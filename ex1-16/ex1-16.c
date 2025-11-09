@@ -31,19 +31,19 @@ int getline1(char s[], int limitMAXLINE)
 {
 	int c, length, currentCount, maxCount;
 
-	// while((c = getchar())!= EOF)
-	// {
-	// 	printf("%c", c);
-	// 	++currentCount;
-	// 	if (currentCount > maxCount)
-	// 	{
-	// 		maxCount = currentCount;
-	// 	}
-	// 	if (c == '\n')
-	// 	{
-	// 		currentCount=0;
-	// 	}
-	// }
+	while((c = getchar())!= EOF)
+	{
+		printf("%c", c);
+		++currentCount;
+		if (currentCount > maxCount)
+		{
+			maxCount = currentCount;
+		}
+		if (c == '\n')
+		{
+			currentCount=0;
+		}
+	}
 
 	// for (length = 0; length < limitMAXLINE - 1 && (c = getchar())!=EOF && c!='\n'; ++length)
 	for (length = 0; (c = getchar())!=EOF && c!='\n'; ++length)
