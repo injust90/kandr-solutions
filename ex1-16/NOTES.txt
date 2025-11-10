@@ -44,4 +44,8 @@ Create a Discord follower notification system.
 
 create another while loop that counts? 
 
-you need two loops: one to count and one to set the array 
+you need two loops: one to count and one to set the array
+
+Zach's Program
+he takes in the input, with respect to the size of the line. then assigns length to the length of the string.
+
