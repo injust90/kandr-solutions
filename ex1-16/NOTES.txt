@@ -13,9 +13,11 @@ loop through the sentence, until you get EOF
 
 Pseudo-code
 12345
-12345
+123456
+1234567
 
-Store 12345
+Store 1234567
+Prints 1234567
 
 If we see 123456
 We went past the limit set
@@ -39,3 +41,7 @@ getline()
 As we get input, store them in an array for use later to be printed as longest
 
 Create a Discord follower notification system.
+
+create another while loop that counts? 
+
+you need two loops: one to count and one to set the array 
