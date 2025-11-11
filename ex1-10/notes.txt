@@ -1,0 +1,29 @@
+Ex 1-9 Write a program to copy its input to its output, 
+replacing each string of one or more blanks by a single blank.
+
+1	\t	\t2
+1	2
+
+1     2
+1 2
+
+c = getchar both assigns and gets the character before End of File
+while c = getchar EOF
+
+	This checks for newline, blanks, and tabs
+	if (c == n)
+		++n1	
+	
+	This puts the character into the stream
+	putchar(c)
+
+Problem: We need to only putchar when there is only one blank/space/tab
+
+Solution: Counting the blanks, then only putchar if blanks are 1
+By default we putchar, unless newlines,tabs,blanks are greater than zero. then we skip.
+
+If we see a character, then putchar again
+
+if we see tab, add to the tab counter
+if tabs are less than 1, put character
+then if tabs are
