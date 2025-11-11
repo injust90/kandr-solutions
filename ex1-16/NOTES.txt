@@ -49,3 +49,13 @@ you need two loops: one to count and one to set the array
 Zach's Program
 he takes in the input, with respect to the size of the line. then assigns length to the length of the string.
 
+BACK TO BASICS
+The program prints the length of the line, and as much of the text as possible
+
+if we see a newline, compare to old length
+
+now we compare for the longest line, using getline?
+
+now we use getline to copy into the line and return length
+
+

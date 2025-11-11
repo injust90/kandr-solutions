@@ -1,0 +1,12 @@
+// Run the "hello world" program on your system. Experiment with leaving parts of the program,
+// to see what error messages you get.
+
+#include <stdio.h>
+
+int main()
+{
+	printf("Hello World!\n");
+
+	return 0;
+}
+

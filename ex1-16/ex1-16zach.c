@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define MAXLINE 3 
+#define MAXLINE 3
 
 int getline1(char line[], int maxline);
 void copy(char to[], char from[]);

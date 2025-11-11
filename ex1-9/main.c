@@ -7,14 +7,14 @@ int main()
 	blanks = tabs = n1 = 0;
 
 	while ((c = getchar()) != EOF) {
-		if (c == '\n')
-			++n1;
-		if (c == ' ')
-			++blanks;
 		if (c == '\t')
 			++tabs;
+
+		else if (c != '\t')
+			tabs = 0;
+
+		if (tabs <= 1) {
+			putchar(c);
+		}
 	}
-	printf("Newlines: %d\n", n1);
-	printf("blanks: %d\n", blanks);
-	printf("tabs: %d\n", tabs);
 }

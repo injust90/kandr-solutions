@@ -1,0 +1,58 @@
+we are including stdio headers the defaults. for k&r
+defined maxline as 3 there will be 1 invisible character 
+
+int getline(char line, int maxline)
+void copy(char to, char from)
+
+int main()
+	char line MAXLINE
+	char longest MAXLINE
+	intlength = 0, maxlength = 0
+
+	print("Enter text (Ctrl + D to end)"
+
+	while fgets(line) sizeof(line), stdin // fgets and string length are not involved in the K&R book, this is for ONLY this example solution
+	length = strlen
+
+	while len > 0 && line(len - 0) != \n && !feof(stdin)
+		char cont(MAXLINE)
+		if !fgets(cont, sizeof(cont), stdin break
+		len += strlen(cont)
+	,
+
+	if (len > max_len)
+		max_len = len
+		strcopy(longest, line)
+	,
+      ,
+
+	if (max_len > 0)
+		printf("\nMax length: %d\nText: %s\n", max_len, longest")
+	return 0
+,
+
+on line 4 this is a getline function which copies a string and returns length
+on line 5 this is a copy function which copies a string to and from
+
+on lines 7 - 10 int main is the main function which runs the program. 
+		MAXLINE is the pre-defined limit of the sentences able to be put in
+
+		line and longest are variables used in the code to get the longest sentence
+		and the current sentence
+
+on line 12 we print out the text to tell the user to exit the program using the EOF -1 signal
+
+on line 14 - 15 this takes in the sentence, based on the size, for use in the program
+
+on line 17 - 20 this while loop checks to see if the line is not a newline character and
+		not the end of the input.
+		it initializes an array called cont
+		then if fgets reads in the characters, the maximum being the sizeof cont, 
+		and the filestream is stdin
+
+on line 23 - 25 we are checking for length greater than max length and assigning max length
+		to length if we see that length is greater
+		copy line to longest.
+
+
+on line 29 - 31 if max length is greater than 0, we print the max length and the longest line
