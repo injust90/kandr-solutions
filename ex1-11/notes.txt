@@ -1,0 +1,19 @@
+Ex 1-11 How would you test the word count program? What kinds of input are most likely to uncover bugs if there are any?
+
+Answer: Some kinds of input that are likely to uncover bugs are foreign inputs. However depending on the foreign text,
+it is in fact "correctly" counting the letters. Due to the fact that it is counting bytes in ++nc.
+
+Maybe super long inputs that goes past the integer counter will also buffer overflow.
+
+this while loop assigns to c until it reaches EOF
+while (c = getchar() != EOF)
+	++new character
+	if c is newline
+		++newline
+	if c is space or newline or tab
+		state is out of word
+	else if state is out of word
+		reset state is in word
+		add to new word
+
+when inputting japanese characters the count increases drastically. what is it counting?

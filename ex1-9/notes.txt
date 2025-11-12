@@ -27,3 +27,5 @@ If we see a character, then putchar again
 if we see tab, add to the tab counter
 if tabs are less than 1, put character
 then if tabs are
+
+
