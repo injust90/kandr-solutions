@@ -1,0 +1,30 @@
+Ex 1-12 Write a program that inputs its input one word per line.
+
+this while loop checks for EOF until it gets the EOF signal
+while c = getchar != EOF
+	
+	this adds a new character 
+	++nc
+
+Input
+ABC abc	abc
+Output
+ABC
+abc
+abc
+
+this while loop checks for EOF until it gets the EOF signal
+while c = getchar != EOF
+
+if c == ' ' || c == '\n' || c == '\t'
+	state = OUT;
+else if (state == OUT)
+	putchar(c);
+	putchar('\n');
+	state = IN;
+
+if a blank character, state is OUT
+when state is OUT
+	putchar
+	putchar \n
+	state = IN
