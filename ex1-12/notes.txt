@@ -28,3 +28,49 @@ when state is OUT
 	putchar
 	putchar \n
 	state = IN
+
+
+  AB  ABC
+ n = 1
+ check for letters
+ 	if we spot a letter
+	set state to in
+	putchar
+
+else we see a blank
+	put newline unless it's the leading because of state
+
+v2.0
+check for letters
+	if we spot a blank
+	set state to out
+else we are in a character
+	set state to IN
+	we put newline once state is set to IN
+	putchar(c)
+
+v3.0
+check for letters
+	if we spot a blank
+	set state to out
+if state is out
+	set back to in
+	print newline
+if state is in
+	print character
+
+v4.0
+check for blanks
+	if blank state is out
+else we are in a word
+	set state to IN
+if state is IN
+	print character
+
+v5.0
+loop to check for blanks
+if leading characters are blank, do not print
+
+v6.0
+we need to check for leading spaces
+
