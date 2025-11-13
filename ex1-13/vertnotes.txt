@@ -1,0 +1,26 @@
+Vertical orientation
+
+abcd	efg
+*       * 
+*	*
+*	*
+*
+
+for each line print the star if and only if the position is greater than the line number
+i.e. we're at line 0, if array[0] = 0 do not print, vice versa if array[1] = 1 print
+
+count: 1
+leading = in
+
+count:4 
+
+int j j < 10
+count[0] = 4
+
+
+abc defg
+
+count0 = 3
+count1 = 4
+
+

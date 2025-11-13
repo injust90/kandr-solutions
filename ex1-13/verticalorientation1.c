@@ -33,12 +33,11 @@ int main()
 
 	for (int i = 0; i < 10; ++i)
 	{
-		for (int j = 0; j < 10; ++j) {
-			if (count[j] > i) {
-				putchar('*');
-			}
-		}
-		putchar('\n');
+		for (int j = 0; j < count[k]; ++j)
+			putchar('*');
+		++k;
 	}
 
+	printf("%d ", count[0]);
+	printf("%d", count[1]);
 }

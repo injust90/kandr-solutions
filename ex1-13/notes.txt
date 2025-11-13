@@ -1,10 +1,64 @@
 // Ex-13 Write a program to print a histogram of the lengths of words in its input. It is easy to draw
 // the histogram with the bars horizontal, a vertical orientation is more challenging.
 
-abcd
-****
+abcd abc
+**** ***
 
-1
-2
-3
-4 *
+while we are reading in the character till EOF
+	count first word (i.e. abcd)
+	store in an array
+	for loop the length of the word in the array
+		print *
+		print ' '
+	
+count up till i see a space
+
+v2.0
+
+while we are reading in the character till EOF
+	count the word UNTIL we see a space
+	
+	then change the array number to be counting when we see the space
+
+to print the star
+while we are iterating through the array
+	print *
+
+
+
+abcd abc
+*    *
+*    *
+*    *
+*
+
+The issue right now is that the program will not print correctly if we having extra spaces. This is a problem because it does not look formatted correctly.
+
+How do we address this?
+
+ABCD		DEF
+****		***
+1234		123
+     \t    \t    
+
+v3.0
+
+while not EOF
+	if IN space
+	we are OUT of word
+
+	else
+		add to count
+		we are IN word
+	
+	for length of array
+		for count k
+			putchar
+ABC DEFG
+3   4
+
+I need the program to print out histograms based on the length of the words input from the line.
+However, if the user inputs additional spaces or tabs it is not accounted for.
+
+while getchar is not EOF
+	store word in array to be used later

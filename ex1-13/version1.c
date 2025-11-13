@@ -5,14 +5,12 @@
 
 int main()
 {
-	int c, leading, j, k;
+	int c, state;
 
-	leading = OUT;
-	k = j = 0;
+	state = OUT;
 
 	// Declares ndigit to be an array of 10 integers
 	int count[10];
-	int spaces[10];
 
 	for (int i = 0; i < 10; ++i)
 		count[i] = 0;
@@ -20,25 +18,20 @@ int main()
 
 	while ((c = getchar()) != EOF) {
 		if (c == ' ' || c == '\n' || c == '\t') {
-			if (leading == IN) {
-				leading = OUT;
-				++j;
+			if (state == IN) {
+				state = OUT;
 			}
 		}
 		else {
-			++count[j];
-			leading = IN;
+			++count[0];
+			state = IN;
 		}
 	}
 
-	for (int i = 0; i < 10; ++i)
+	printf("%d", count[0]);
+
+	for (int i = 0; i < count[0]; ++i)
 	{
-		for (int j = 0; j < 10; ++j) {
-			if (count[j] > i) {
-				putchar('*');
-			}
-		}
-		putchar('\n');
+		putchar('*');
 	}
-
 }
