@@ -1,0 +1,26 @@
+adef gbc 
+count0: 4
+count1: 3
+
+i0 k0  k1
+i1 k0  k1
+i2 k0  k1
+i3 k0  k1
+
+k4* k5*
+k4* k5*
+k4* k5*
+k4* k5*
+k5
+
+12 123
+*  *
+*  *
+   *
+
+Give me a space between positions
+
+for i < 10
+	for k < 10
+	put space if count is greater than 0
+	put spaces equivalent to the k count

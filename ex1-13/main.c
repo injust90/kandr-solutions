@@ -31,14 +31,19 @@ int main()
 		}
 	}
 
-	for (int i = 0; i < 10; ++i)
-	{
-		for (int j = 0; j < 10; ++j) {
-			if (count[j] > i) {
+	// printf("Count: %d ", count[0]);
+	// printf("Count: %d ", count[1]);
+	// printf("Count: %d\n ", count[2]);
+
+	for (int i = 0; i < 10; ++i) {
+		for (int k = 0; k < 10; ++k) {
+			if (count[k] <= i)
+				putchar(' ');
+			if (count[k] > i) {
 				putchar('*');
+				// printf("count[k]: %d ", count[k]);
 			}
 		}
 		putchar('\n');
 	}
-
 }
