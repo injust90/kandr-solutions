@@ -25,3 +25,15 @@ counter[c] += 1
 
 for loop that iterates through the character counter
 prints i transposed to character, counter at position i
+
+// Borked version
+for length of ASCII
+	putchar for the counter i.e. count at 0 
+
+	print counter if we see counter is greater than 0 and not newline
+
+// Ideal version
+for length of ASCII
+	print count THEN print histogram
+
+
