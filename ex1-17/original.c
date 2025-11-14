@@ -7,18 +7,15 @@ void copy(char to[], char from[]);
 int main() {
 	int len;
 	int max;
-	int c;
 	char line[MAXLINE];
 	char longest[MAXLINE];
 
 	max = 0;
 
-	while ((c = getchar()) != EOF) {
-		if (c != '\t' && c != '\n' && c != ' ')
-			putchar(c);
-	}
+	while ((len = getline1(line, MAXLINE)) > 0)
+		if (len >= 80)
+			copy(longest, line);
 
-	return 0;
 }
 
 int getline1(char s[], int lim) {

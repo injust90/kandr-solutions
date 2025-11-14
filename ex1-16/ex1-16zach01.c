@@ -1,11 +1,7 @@
-
 #include <stdio.h>
 #include <string.h>
-#define MAXLINE 3 
+#define MAXLINE 1000
 
-void copy(char to[], char from[]);
-
-// print longest input line
 int main() {
     char line[MAXLINE];
     char longest[MAXLINE];
@@ -13,13 +9,13 @@ int main() {
 
     printf("Enter text (Ctrl+D to end):\n");
 
-    while ((getline1(line, MAXLINE), sizeof(line), stdin)) {
-        len = (line);
+    while (fgets(line, sizeof(line), stdin)) {
+        len = strlen(line);
 
         while (len > 0 && line[len - 1] != '\n' && !feof(stdin)) {
             char cont[MAXLINE];
-            if (!(cont, sizeof(cont), stdin)) break;
-            len += (cont);
+            if (!fgets(cont, sizeof(cont), stdin)) break;
+            len += strlen(cont);
         }
 
         if (len > max_len) {

@@ -1,0 +1,12 @@
+Ex 1-18 Write a program to remove trailing blanks and tabs from each line of input, and to delete entirely blank lines.
+
+abcd\t\t
+abcd
+
+If we see a tab, do not add it to getline
+
+while c = getchar
+	if !\t
+		putchar
+
+./a.out < input.txt | cat -T

@@ -1,0 +1,54 @@
+123\n
+Len: 4
+123456
+Len: 4
+Len: 3
+
+abcde counter: 6
+abcdef counter: 7
+1234567 counter: 8
+
+print 1234
+
+set a separate counter, and getline the counter of the longest line seen
+
+while c getchar is not end of file
+	count till we see a newline
+
+	compare counter to maxseen
+
+	if max > counter
+		getline
+
+	finally, copy.
+
+v2.0
+
+- [X] Fix getline copying the most recently seen text
+	
+	Possible causes:
+	- Count resets, so that it continues to copy the most recent text
+
+while we are going through character by character
+	if we see a character, add to count
+		
+		if count is greater than max
+			set max to count
+			read the line and return length
+	
+	I think what is happening is getline is taking in the current line, not the saved line as wanted.
+
+getline
+abc
+
+s[0] = a
+
+abcd
+abc
+abcd
+MAXLINE 3
+def
+abcd
+
+abc
+de

@@ -1,0 +1,13 @@
+Exercise 1-17 Write a program to print all input lines that are longer than 80 characters.
+
+Doesn't print
+12345...79
+
+Prints
+12345...81
+12345...81
+
+while len = getline
+	if len greater than 80
+		copy
+		print the line
