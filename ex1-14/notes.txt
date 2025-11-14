@@ -1,0 +1,27 @@
+Ex 1-14 Write a program to print a histogram of the frequencies of different characters in its input.
+
+aaa bb cccc d
+
+a: ***
+b: **
+c: ****
+d: *
+ : ***
+
+ Two arrays: One that stores the count, and the other stores the character.
+
+ character[0] = 'a';
+ count[0] = 3;
+
+ If we see the character 'a', add it to the array at position 0
+
+ character['a'];
+
+character a '97'
+increment the character in the position
+print out the character
+
+counter[c] += 1
+
+for loop that iterates through the character counter
+prints i transposed to character, counter at position i
