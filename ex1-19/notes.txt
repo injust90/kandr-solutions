@@ -1,0 +1,24 @@
+abc
+cba
+
+reversed a[0]= a[3]
+	char reverse[3];
+	char reversed[3];
+	reverse[0] = 'a';
+	reverse[1] = 'b';
+	reverse[2] = 'c';
+
+	int j = 0;
+	for (int i = 2; i >= 0; --i) {
+		reversed[i] = reverse[j];
+		printf("reverse: %c ", reverse[j]);
+		printf("reversed: %c ", reversed[i]);
+		++j;
+	}
+
+	printf("reversed: %s", reversed);
+
+reverse
+	take end of the character string taken from length from getline
+	
+	for 

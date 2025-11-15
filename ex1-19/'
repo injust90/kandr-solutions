@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+	char reverse[3];
+	reverse[0] = 'a';
+	reverse[1] = 'b';
+	reverse[2] = 'c';
+
+
+	return 0;
+}
