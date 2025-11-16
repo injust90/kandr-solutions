@@ -4,10 +4,29 @@ next tab stop.
 
 Assume a fixed set of tab stops, say every n columns. Should n be a variable or a symbolic parameter?
 
-abcd\tefg
-abcd efg
-\te
-
 So I am replacing tabs with spaces, and accounting for the previous characters
 
 if in a word
+    	     				
+
+Keep it Simple
+Replace spaces with tabs
+
+abcd	onetab
+abcd		twotabs
+	abcd
+12345678
+
+abcd----onetab
+abcd--------twotabs
+
+allocate 8 spaces for each tab
+
+
+012345678
+A--------
+
+if we see the tab
+	we need to allocate 8 blanks
+
+	at position s[i] to s[i+8]
