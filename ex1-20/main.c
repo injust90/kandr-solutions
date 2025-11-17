@@ -23,20 +23,24 @@ int main()
 
 int my_getline(char s[], int lim)
 {
-	int c, i;
+	int c, i, k;
+	k = 0;
 
 	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
-		s[i] = c;
 		if (c == '\t') {
-			for (int j = 0;j < 4; ++j)
+			for (int j = 0;j < 4 - k; ++j)
 			{
 				s[i] = '*';
 				// Write 4 characters but we don't want to advance past it.
-				if (j < 3)
+				if (j < 3 - k)
 				{
 					++i;
 				}
 			}
+		}
+		else if (c != '\n') {
+			s[i] = c;
+			++k;
 		}
 	}
 

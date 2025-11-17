@@ -45,3 +45,8 @@ if we see a character do nothing, just add to the line
 if we see a tab, add spaces based on whether or not we have been at 8 indices 
 
 tabwidth 1
+
+if we see a character, count j
+if we see a tab
+	loop through j times
+	reset j

@@ -1,7 +1,9 @@
-abcdefg	1234
-abcdef	1234
-abcde	1234
-abcd	1234
-abc	1234	
-abc	1234	56789	
-a	1234	
+	
+a	1
+bc	2
+def	3
+
+****
+a***1
+bc**2
+def*3
