@@ -30,3 +30,18 @@ if we see the tab
 	we need to allocate 8 blanks
 
 	at position s[i] to s[i+8]
+
+01234567
+------------
+abcdefg	1234
+abcdef	1234
+abcde	1234
+abcd	1234
+abc	1234	
+abc	1234	56789	
+a	1234	
+
+if we see a character do nothing, just add to the line
+if we see a tab, add spaces based on whether or not we have been at 8 indices 
+
+tabwidth 1

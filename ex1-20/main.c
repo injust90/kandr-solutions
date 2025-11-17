@@ -26,14 +26,20 @@ int my_getline(char s[], int lim)
 	int c, i;
 
 	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
+		s[i] = c;
 		if (c == '\t') {
-			for (int j = 0; j <= 8; ++j)
-				s[i + j] = ' ';
-			i += 8;
+			for (int j = 0;j < 4; ++j)
+			{
+				s[i] = '*';
+				// Write 4 characters but we don't want to advance past it.
+				if (j < 3)
+				{
+					++i;
+				}
+			}
 		}
-		else 
-			s[i] = c;
 	}
+
 	if (c == '\n') {
 		s[i] = c;
 		++i;

@@ -1,4 +1,7 @@
-abcd	onetab
-abcd		twotabs
-	onetab
-12345	onetab
+abcdefg	1234
+abcdef	1234
+abcde	1234
+abcd	1234
+abc	1234	
+abc	1234	56789	
+a	1234	
