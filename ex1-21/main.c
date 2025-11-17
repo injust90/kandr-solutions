@@ -3,12 +3,15 @@
 #include <stdio.h>
 
 #define MAXLINE 1000 // Maximum input line size
+#define IN 1
+#define OUT 0
 
 int max; // Mximum length seen so far
+int state = OUT;
 char line[MAXLINE]; // Current input line
 char longest [MAXLINE]; // Longest line saved here
 
-int my_getline(char s[], int lim);
+int entab(char s[], int lim);
 void copy(char to[], char from[]);
 
 // print longest input line; specialized version
@@ -16,35 +19,29 @@ int main()
 {
 	int len;
 	
-	while ((len = my_getline(line, MAXLINE)) > 0)
+
+	// printf("        8spaces\n");
+	// printf("       	7spaces1tab\n");
+	// printf("    	4spaces1tab\n");
+	while ((len = entab(line, MAXLINE)) > 0)
 		printf("%s", line);
 	return 0;
 }
 
-int my_getline(char s[], int lim)
+int entab(char s[], int lim)
 {
 	int c, i, k;
 	k = 0;
 
 	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
-		// Re initialize space width everytime I am at the 8th character
-		if (i % 8 == 0) {
-			k = 0;
+		if (c == ' ') {
+			state = IN;
+				if (state == OUT)
+					s[i] = '^';
 		}
-		if (c == '\t') {
-			for (int j = 0;j < (8 - k); ++j)
-			{
-				s[i] = '*';
-				// Write j characters but we don't want to advance past it.
-				if (j < 7 - k)
-				{
-					++i;
-				}
-			}
-		}
-		else if (c != '\n') {
+		else {
 			s[i] = c;
-			++k;
+			state = OUT;
 		}
 	}
 
