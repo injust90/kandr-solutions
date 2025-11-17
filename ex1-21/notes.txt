@@ -31,6 +31,10 @@ we ignore until we see our last tab
         asdf
        ^
 IIIIIIIIO
+^asdf
 
 while state is IN, we do not add anything
 however when state is out, we add
+
+**asdf
+^ 

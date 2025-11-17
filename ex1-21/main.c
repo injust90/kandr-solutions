@@ -1,5 +1,5 @@
-// Ex 1-20 Write a program detab that replaces tabs in the input with the proper number of blanks to space to the next tab stop. Assume a fixed set of tab stops, say every n
-// columns. Should n be a variable or a symbolic parameter?
+// Ex 1-21 Write a program entab that replaces strings of blanks by the minimum number of tabs and blanks to achieve the same spacing. 
+// Use the same tab as for detab. When either a tab or single blank would suffice to reach a tab stop, which should be given preference?
 #include <stdio.h>
 
 #define MAXLINE 1000 // Maximum input line size
@@ -35,13 +35,12 @@ int entab(char s[], int lim)
 
 	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
 		if (c == ' ') {
-			state = IN;
-				if (state == OUT)
-					s[i] = '^';
+			++k;
+			if (k == 1)
+				s[i] = '^';
 		}
 		else {
 			s[i] = c;
-			state = OUT;
 		}
 	}
 
