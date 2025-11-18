@@ -11,56 +11,28 @@ int state = OUT;
 char line[MAXLINE]; // Current input line
 char longest [MAXLINE]; // Longest line saved here
 
+int my_getline(char line[], int maxline);
 int entab(char s[], int lim);
 void copy(char to[], char from[]);
+
+
 
 // print longest input line; specialized version
 int main()
 {
 	int len;
-	
+	int c;
+	int lim = MAXLINE;
+	char s[MAXLINE];
 
-	// printf("        8spaces\n");
-	// printf("       	7spaces1tab\n");
-	// printf("    	4spaces1tab\n");
-	while ((len = entab(line, MAXLINE)) > 0)
-		printf("%s", line);
-	return 0;
-}
-
-int entab(char s[], int lim)
-{
-	int c, i, j;
-	j = 0;
-
-	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
-		if (c == ' ') {
-			++j;
-			if (j == 2) {
-				printf("Hello World!\n");
-				s[i] = '^';
-				j = 0;
-			}
+	for (int i = 0; i < lim -1; i++) {
+		c = getchar();
+		s[i] = c;
+		if (c == '\n')
+			printf("%s", s);
+		if (c == EOF && c == '\n') {
+			break;
 		}
-		else {
-			s[i] = c;
-		}
-	}
+	}		
 
-	// if (c == '\n') {
-	// 	s[i] = c;
-	// 	++i;
-	// }
-	s[i] = '\0';
-	return i;
 }
-
-void copy(char to[], char from[])
-{
-	int i;
-
-	i = 0;
-	while ((to[i] = from[i]) != '\0')
-		++i;
-}
-

@@ -1,45 +1,27 @@
 Ex 1-21 Write a program entab that replaces strings of blanks by the minimum number of tabs and blanks to achieve the same spacing. Use the same tab as for detab. When either a tab or single blank would suffice to reach a tab stop, which should be given preference?
 
-Input
-abcd
-
-If we are the i % 4th position, we print a tab. 
-
-else print a space, depending on position.
-
-if c == ' '
-	print tab
-	
-
-********
-*******\t
-
-replace spaces with a tab until i count to 8
-
-********as
-0123456789
-
-^asdf
-0123456789
-
-if we see a space, replace with a tab
-up the index while we see spaces
-then store it in the array
-
-we ignore until we see our last tab
-
-        asdf
-       ^
-IIIIIIIIO
-^asdf
-
-while state is IN, we do not add anything
-however when state is out, we add
-
-**asdf
-^ 
-
 0123456789
 *********a
 ^a
 ^        a
+
+0123456789
+*a
+
+- [x] Replace spaces with tabs
+- [x] Replace 2 spaces with tabs
+- [x] Replace 8 spaces with tabs
+- [ ] Shift array by -spaceCount to adjust for new tab insertion
+
+Replace 2 spaces with tabs
+count, when we see two spaces. replace that character with *
+
+Run through each character, and if you see a space. Count up to 8 spaces. 
+Do not add the character to the array, and shift the array over to the left by the count. 
+If we see a non-space character reset the count.
+
+If count is at 8, add a *.
+
+0123456789
+---------*
+s[i - spaceCount]
