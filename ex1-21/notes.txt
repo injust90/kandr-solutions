@@ -38,3 +38,8 @@ however when state is out, we add
 
 **asdf
 ^ 
+
+0123456789
+*********a
+^a
+^        a

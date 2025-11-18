@@ -1,5 +1,5 @@
 #OBJS specifies which files to compile as part of the project
-OBJS = testsegfault.c
+OBJS = main.c
 
 #CC Specifies which compiler we're using
 CC = g++

@@ -17,18 +17,50 @@ void copy(char to[], char from[]);
 // print longest input line; specialized version
 int main()
 {
-	int c;
-	int lim = MAXLINE;
-	char s[MAXLINE];
+	int len;
+	
 
-	while (c != EOF) {
-		for (int i = 0; i < lim -1; i++) {
-			c = getchar();
-			s[i] = c;
-			if (c == EOF || c == '\n') {
-				break;
+	// printf("        8spaces\n");
+	// printf("       	7spaces1tab\n");
+	// printf("    	4spaces1tab\n");
+	while ((len = entab(line, MAXLINE)) > 0)
+		printf("%s", line);
+	return 0;
+}
+
+int entab(char s[], int lim)
+{
+	int c, i, j;
+	j = 0;
+
+	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
+		if (c == ' ') {
+			++j;
+			if (j == 2) {
+				printf("Hello World!\n");
+				s[i] = '^';
+				j = 0;
 			}
 		}
+		else {
+			s[i] = c;
+		}
 	}
-	printf("%s\n", s);
+
+	// if (c == '\n') {
+	// 	s[i] = c;
+	// 	++i;
+	// }
+	s[i] = '\0';
+	return i;
 }
+
+void copy(char to[], char from[])
+{
+	int i;
+
+	i = 0;
+	while ((to[i] = from[i]) != '\0')
+		++i;
+}
+
