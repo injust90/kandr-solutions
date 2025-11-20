@@ -29,12 +29,22 @@ int main()
 int mygetline(char s[], int lim)
 {
 	int c, i;
+	int spaceCounter = 0;
 
-	for (i = 0; i < lim - 1 && (c=getchar()) != EOF && c!='\n'; ++i)
-		s[i] = c;
+	for (i = 0; i < lim - 1 && (c=getchar()) != EOF && c!='\n'; ++i) {
+		if (c == ' ') {
+			s[i] = '+';
+			spaceCounter++;
+		}
+		else {
+			s[i] = c;
+		}
+		printf("s[%d]: %c ", i, s[i]);
+	}
 	if (c == '\n') {
 		s[i] = c;
 		++i;
+		printf("\n");
 	}
 	s[i] = '\0';
 

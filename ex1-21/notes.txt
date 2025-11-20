@@ -25,3 +25,18 @@ If count is at 8, add a *.
 0123456789
 ---------*
 s[i - spaceCount]
+
+if we see a space
+	add to space counter
+	if space counter == 2
+		add tab to s[i]
+
+else we see a character
+	add character to s[i - spacecounter - 1]
+	space counter = 0
+
+0123456789
+**a
+-a
+
+-a

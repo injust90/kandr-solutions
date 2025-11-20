@@ -1,0 +1,25 @@
+0123456789
+********ab
+
+This runs till we see EOF or newline
+while c = from not EOF and not newline
+
+	position in the array
+	pos++
+
+	if we see a space, check for position modulo TABSTOP equal to 0
+	if c == ' '
+		if pos % TABSTOP == 0
+		add a tab
+			tabs++
+			space = 0
+		else we add to spaces
+		else
+			spaces++;
+
+	if c != ' '
+		while (tabs -- > 0)
+			to[j++] = '\t'
+
+		if c equals tab
+			pos plus tabstop
