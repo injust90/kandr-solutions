@@ -1,0 +1,45 @@
+Ex 1-18 Write a program to remove trailing blanks and tabs from each line of input, and to delete entirely blank lines.
+
+\t\tasdf\t\t
+\t\tasdf
+***1234***
+***1234
+
+Selectively print the output
+Hit something other than whitespace exit
+Once hit newline, stop
+
+asdf asdf***
+
+
+if we see a whitespace, put the state as IN
+else state is OUT and we can print
+
+so while state is OUT we print and else we do not print
+
+the problem right now is the backtracking where the get_line function has no choice but to continue to progress through
+the array.
+
+When the program has trailing spaces it will not print a newline
+- Reason being is that it adds a terminating character, so the copy will no longer function
+
+Keep it simple stupid
+- [x] First thing's first, we detect the whitespace ' ' or '\t'
+- [x] print to s[i] based on whether or not we see whitespace or tab. In other words, do not print whitespace whatsoever
+- [x] Do not print trailing 
+- [ ] Print leading
+
+0123456789
+**asdf****\0
+**asdf
+
+IN OUT IN 
+
+for loop in reverse, and removing whitespace
+
+for (int i = len; i > len; --i)
+if not whitespace and stateCounter == 1
+	to[i] = from[i]
+
+if state = IN
+	++i;

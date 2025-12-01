@@ -1,0 +1,4 @@
+Exercise 1-16 Revise the main routine of the longest-line program so it will correctly print the length of arbitrarily long input lines, and as much possible of the text.
+
+12345
+Length: 5
