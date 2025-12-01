@@ -1,4 +1,10 @@
-asdf			
-asdf   
-asfasdf     asdfasdfsdf	a	asdf
-asdfasdf      asdfa sf 		asadf
+OneLeadingSpace 
+TwoleadingSpace  
+OneLeadingTab	
+TwoTrailingTab		
+One Space Trailing 
+Two Spaces Trailing  
+ One Space leading and trailing spaces  
+  Two spaces leading and trailing tab	
+
+^^^blank newline^^^
